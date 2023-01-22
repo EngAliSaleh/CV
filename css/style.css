@@ -1,0 +1,708 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+}
+
+:root {
+  --section-padding: 100px 0;
+  --main-color: brown;
+  --main-transition: 0.3s;
+}
+
+body {
+
+  height: 100vh;
+}
+
+.contanier {
+  width: 80%;
+  margin: auto;
+}
+
+/* Start nav */
+nav {
+  background-color: black;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  position: fixed;
+}
+
+nav::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  background-color: #999;
+  bottom: 0;
+  width: 100%;
+}
+
+nav .contanier {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+  position: relative;
+  align-items: center;
+}
+
+nav .contanier .logo a {
+  color: var(--main-color);
+  text-decoration: none;
+  font-size: 30px;
+}
+
+nav .contanier .logo a span {
+  color: white;
+}
+
+nav .contanier ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+
+
+}
+
+nav .contanier ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 0 20px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: var(--main-transition);
+  position: relative;
+
+}
+
+
+nav .contanier ul li a.active {
+  color: var(--main-color);
+}
+
+nav .contanier ul li a:hover {
+  color: var(--main-color);
+}
+
+nav .contanier .bar {
+  color: white;
+  display: none;
+}
+
+
+
+
+
+
+
+/* End nav */
+
+/* Start hero */
+#hero {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  background: url(../imeges/hero.jpg) no-repeat;
+  background-size: cover;
+  padding: 50px 0;
+  position: relative;
+  z-index: 1;
+}
+
+#hero .opacity {
+  background-color: rgba(77, 33, 33, 0.199);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+}
+
+#hero .contanier .content {
+  width: fit-content;
+  text-align: left;
+}
+
+#hero .contanier .content h1 {
+  font-size: 40px;
+  color: white;
+  text-transform: capitalize;
+}
+
+#hero .contanier .content p {
+  font-size: 28px;
+  color: var(--main-color);
+  margin: 20px 0;
+  border-bottom: 2px solid white;
+  padding: 30px 0;
+  text-transform: capitalize;
+}
+
+#hero .contanier .content .icons {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* #hero .contanier .content .icons a {
+ 
+} */
+#hero .contanier .content .icons a i {
+  color: white;
+  font-size: 35px;
+  transition: var(--main-transition);
+}
+
+#hero .contanier .content .icons a:hover i {
+  color: var(--main-color);
+}
+
+#hero .contanier .content .down {
+  color: var(--main-color);
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 40px;
+  transition: var(--main-transition);
+}
+
+#hero .container .content .down i {
+  animation: up-down var(--main-transition) infinite linear alternate;
+}
+
+#hero .contanier .content .down:hover {
+  color: white;
+}
+
+@keyframes up-down {
+  100% {
+    transform: translateY(-20px);
+  }
+}
+
+/* End hero */
+
+/* Start skills */
+#about {
+  padding: var(--section-padding);
+}
+
+#about .contanier .main {
+  display: flex;
+
+  gap: 45px;
+
+}
+
+#about .contanier .main .l-div {
+  width: 30%;
+  /* text-align: right; */
+  padding: 0 100px;
+}
+
+#about .contanier .main .l-div .main-title h2 {
+  font-size: 30px;
+  margin-bottom: 10px;
+  color: var(--main-color);
+}
+
+#about .contanier .main .l-div .main-title p {
+  font-size: 15px;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+#about .contanier .main .R-div {
+  width: 70%;
+}
+
+#about .contanier .main .R-div .skills {
+  margin-top: 40px;
+}
+
+#about .contanier .main .R-div .skills .skill {
+  margin-bottom: 30px;
+}
+
+#about .contanier .main .R-div .skills .skill .header {
+  display: flex;
+  justify-content: space-between;
+}
+
+#about .contanier .main .R-div .skills .skill .progress {
+  width: 100%;
+  height: 12px;
+  background-color: rgba(0, 0, 0, 0.192);
+  margin-top: 10px;
+  border: 1px solid white;
+  border-radius: 5px;
+}
+
+#about .contanier .main .R-div .skills .skill .progress>div {
+  height: 100%;
+  background-color: rgb(78, 19, 19);
+  border: 1px solid rgb(78, 19, 19);
+  border-radius: 5px;
+}
+
+#about .contanier .main .R-div .skills .skill .progress>div.html {
+  width: 0%;
+  animation: html var(--main-transition) 1s forwards alternate;
+}
+
+#about .contanier .main .R-div .skills .skill .progress>div.css {
+  width: 0%;
+  animation: css var(--main-transition) 2s forwards alternate;
+}
+
+#about .contanier .main .R-div .skills .skill .progress>div.java-script {
+  width: 0%;
+  animation: java-script var(--main-transition) 3s forwards alternate;
+}
+
+#about .contanier .main .R-div .skills .skill .progress>div.Bootstrap-5 {
+  width: 0%;
+  animation: Bootstrap-5 var(--main-transition) 4s forwards alternate;
+}
+
+@keyframes html {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 95%;
+  }
+}
+
+@keyframes css {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 85%;
+  }
+}
+
+@keyframes java-script {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 80%;
+  }
+}
+
+@keyframes Bootstrap-5 {
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 90%;
+  }
+}
+
+
+/* End skills */
+
+/* Start Experiance */
+#experiance {
+  padding: var(--section-padding);
+  background-color: gainsboro;
+
+}
+
+#experiance .contanier .main {
+  display: flex;
+  gap: 59px;
+
+}
+
+#experiance .contanier .main .l-div {
+  width: 30%;
+  /* text-align: right; */
+  padding: 0 100px;
+}
+
+#experiance .contanier .main .l-div .main-title h2 {
+  font-size: 25px;
+  margin-bottom: 10px;
+  color: var(--main-color);
+}
+
+#experiance .contanier .main .l-div .main-title p {
+  text-transform: capitalize;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+#experiance .contanier .main .R-div .cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+#experiance .contanier .main .R-div .cards .card {
+  background-color: white;
+  padding: 20px;
+  border: 2px solid var(--main-color);
+  transition: var(--main-transition);
+}
+
+#experiance .contanier .main .R-div .cards .card:hover {
+  transform: scale(1.2);
+  z-index: 3;
+  border-radius: 5px;
+}
+
+#experiance .contanier .main .R-div .cards .card i {
+  font-size: 25px;
+  color: var(--main-color);
+}
+
+#experiance .contanier .main .R-div .cards .card h3 {
+  font-size: 15px;
+  margin: 14px;
+}
+
+#experiance .contanier .main .R-div .cards .card p {
+  line-height: 25px;
+}
+
+/* End Experiance */
+
+/* Start Works */
+#works {
+  padding: var(--section-padding);
+}
+
+#works .contanier .main {
+  display: flex;
+  gap: 90px;
+}
+
+#works .contanier .main .l-div {
+  width: 35%;
+  padding: 0 100px;
+}
+
+#works .contanier .main .l-div .main-title h2 {
+  font-size: 25px;
+  margin-bottom: 10px;
+  color: var(--main-color);
+}
+
+#works .contanier .main .l-div .main-title p {
+  font-size: 10px;
+  text-transform: capitalize;
+  font-weight: bold;
+}
+
+#works .contanier .main .R-div {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 250px;
+  gap: 10px;
+  box-shadow: 0 0 20px 2px rgb(5, 4, 4);
+}
+
+#works .contanier .main .R-div .image {
+  transition: var(--main-transition);
+  border: 3px solid var(--main-color);
+}
+
+#works .contanier .main .R-div .image:hover {
+  transform: scale(1.2);
+  z-index: 3;
+}
+
+#works .contanier .main .R-div .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+#works .contanier .main .R-div .first-img {
+  grid-column: span 2;
+}
+
+/* End Works */
+
+/* Start Contact */
+
+#contact {
+  padding: var(--section-padding);
+  background-color: gainsboro;
+  /* height: 45vh; */
+}
+
+#contact .contanier .main {
+  display: flex;
+  gap: 90px;
+}
+
+#contact .contanier .main .l-div {
+  width: 30%;
+  /* text-align: right; */
+  padding: 0 100px;
+}
+
+#contact .contanier .main .l-div .main-title h2 {
+  font-size: 25px;
+  margin-bottom: 14px;
+  color: var(--main-color);
+}
+
+#contact .contanier .main .l-div .main-title p {
+  font-size: 11px;
+  text-transform: capitalize;
+  font-weight: bold;
+}
+
+#contact .contanier .main .R-div .cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 60px;
+  place-items: center;
+  place-content: center;
+}
+
+
+#contact .contanier .main .R-div .cards .card h4 {
+  font-size: 20px;
+  margin-bottom: 19px;
+  color: var(--main-color);
+}
+
+/* Start Footer */
+footer .contanier {
+  padding: 20px 0;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+
+}
+
+footer .contanier .l-div h3 {
+  font-size: 20px;
+  padding-left: 150px;
+}
+
+footer .contanier .l-div h3 span {
+  color: var(--main-color);
+}
+
+footer .contanier .r-div p {
+  font-size: 15px;
+  padding-right: -100px;
+  font-weight: bold;
+}
+
+footer .contanier .r-div p span {
+  color: var(--main-color);
+  font-size: 15px;
+}
+
+footer .arrow {
+
+  position: fixed;
+  bottom: 10px;
+  right: 15px;
+  background-color: var(--main-color);
+  border-radius: 50%;
+  opacity: 0;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+
+}
+
+footer .arrow i {
+  color: black;
+  font-size: 30px;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  left: 50%;
+}
+
+/* End Footer */
+
+/* End Contact */
+
+
+/* Start Media */
+
+
+
+/* End Media */
+
+
+
+@media (max-width:800px) {
+  nav .contanier .bar {
+    display: block;
+    font-size: 40px;
+  }
+
+  nav .contanier ul {
+    position: absolute;
+    top: 100%;
+    left: 70%;
+    width: 43%;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px 0;
+    display: flex;
+    background-color: #999;
+    visibility: hidden;
+  }
+
+  nav .contanier ul.show-ul {
+    visibility: visible;
+  }
+
+  #hero .contanier .content {
+    text-align: center;
+    margin: auto;
+  }
+
+  #about .contanier .main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 45px;
+    justify-content: center;
+
+  }
+
+  #about .contanier .main .l-div {
+    width: 100%;
+    text-align: center;
+    padding: 0 90px;
+  }
+
+  #experiance .contanier .main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 45px;
+    justify-content: center;
+  }
+
+  #experiance .contanier .main .l-div {
+    width: 100%;
+    text-align: center;
+    padding: 0 90px;
+  }
+
+  #experiance .contanier .main .R-div .cards {
+    display: grid;
+    grid-template-columns: repeat(1, 350px);
+    grid-auto-rows: 250px;
+    gap: 15px;
+  }
+
+  #experiance .contanier .main .R-div .cards .card {
+    background-color: white;
+    padding: 35px;
+    border: 2px solid var(--main-color);
+    transition: var(--main-transition);
+  }
+
+  #works .contanier .main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 45px;
+    justify-content: center;
+  }
+
+  #works .contanier .main .l-div {
+    width: 100%;
+    text-align: center;
+    padding: 0 90px;
+  }
+
+  #works .contanier .main .R-div {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: 250px;
+    box-shadow: 0 0 20px 2px rgb(5, 4, 4);
+  }
+
+  #works .contanier .main .R-div .first-img {
+    grid-column: span 1;
+  }
+
+  #contact .contanier .main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 100px;
+    justify-content: center;
+  }
+
+  #contact .contanier .main .l-div {
+    width: 100%;
+    text-align: center;
+    padding: 0 90px;
+  }
+
+  #contact .contanier .main .l-div .main-title h2 {
+    font-size: 35px;
+    margin-bottom: 14px;
+    color: var(--main-color);
+  }
+
+  #contact .contanier .main .R-div .cards {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 145px;
+    place-items: center;
+    place-content: center;
+
+  }
+
+  #contact .contanier .main .R-div .cards .card h4 {
+    font-size: 15px;
+    margin-bottom: 19px;
+    color: var(--main-color);
+  }
+
+  #contact .contanier .main .l-div .main-title p {
+    font-size: 20px;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+
+  footer .contanier {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+  }
+  footer .contanier .l-div h3 {
+    font-size: 20px;
+    padding-left: 0;
+  }
+
+  
+
+
+
+
+
+
+
+
+
+}
