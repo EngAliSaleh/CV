@@ -29,7 +29,7 @@ nav {
   position: fixed;
   width: 100%;
   z-index: 100;
-  position: fixed;
+  
 }
 
 nav::after {
@@ -448,7 +448,7 @@ nav .contanier .bar {
 
 #contact .contanier .main {
   display: flex;
-  gap: 90px;
+  gap: 50px;
 }
 
 #contact .contanier .main .l-div {
@@ -495,7 +495,7 @@ footer .contanier {
 
 footer .contanier .l-div h3 {
   font-size: 20px;
-  padding-left: 150px;
+
 }
 
 footer .contanier .l-div h3 span {
@@ -504,7 +504,6 @@ footer .contanier .l-div h3 span {
 
 footer .contanier .r-div p {
   font-size: 15px;
-  padding-right: -100px;
   font-weight: bold;
 }
 
